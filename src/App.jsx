@@ -1,5 +1,5 @@
 import styles from './css/App.module.css'
-import "./css/index.css"
+import "./index.css"
 import { TodoTaskViewer } from './todoListELemnts/todoELement'
 import {  useRef, useState } from 'react'
 import { SVG_LOader } from './SVG_Element/svgs'
