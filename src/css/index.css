@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: poppins;
+    height: 100%;
+    overflow: hidden;
+}
+
+:root *{
+    transition: 
+    width linear .4s,
+    opacity .3s ease,
+    filter ease-in-out .3s,
+    flex-direction ease .2s,
+    transform ease-in .3s,
+    visibility ease .3s;
+}

@@ -1,0 +1,44 @@
+
+.Task_Box{
+    width: 18rem;
+    height: fit-content;
+    border: 1px solid;
+    border-radius: .7em;
+    padding: .4rem;
+    text-transform: capitalize;
+    font-family: poppins;
+
+}
+.Box_Header,.Box_Footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .2rem;
+}
+.Box_Footer{
+    justify-content: space-between;
+}
+
+.Box_Footer > button ,.Box_Header button{
+    padding: .1rem .5rem;
+    border-radius: .5em;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: .7rem;
+}
+
+
+.Box_Main >  h1{
+    font-weight: bold;    
+    padding: .6rem 0.3rem;
+}
+
+@media (max-width:44rem) {
+    .Task_Box{
+        
+        width: 14rem;
+        font-size: .7rem;
+        padding: .2rem .3rem;
+    }
+}
