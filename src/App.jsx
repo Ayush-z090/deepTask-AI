@@ -38,7 +38,6 @@ function App() {
   
    const handlers = useSwipeable({
     onSwipedLeft: () => {
-      console.log("left")
      if(currentElement === 0){
       swipElement_One.current.style.transform="translateX(-34rem)";
       swipElement_Two.current.style.transform="translateX(0rem)";
@@ -72,7 +71,7 @@ function App() {
   // this condition will check the task array in hook variable and localstorage
   // the deletion is done in hook var not in localstorage so if a user delet a task,one elemnt in hook var array is remove
   // total task in both hookvar ,localstorage have to be same, as we are updating hookVar and localstorage together everywhere we use them...
-  if (Tasks.map(data=>data.task).length !== JSON.parse(localStorage.getItem("tasksArr")).map(data=>data.task).length){
+  if (localStorage.getItem("tasksArr") && Tasks.map(data=>data.task).length !== JSON.parse(localStorage.getItem("tasksArr")).map(data=>data.task).length){
     localStorage.setItem("tasksArr",JSON.stringify(Tasks))
     if(Tasks.length !== 0)(
       setChildElemnt(
@@ -103,7 +102,6 @@ function App() {
     .then(data=> 
       {  
 
-        console.log(data)
         // set the config  when user ask to add a task
 
         if (Object.keys(data.message).includes("addUser") && data.message.addUser === true ){
@@ -119,6 +117,7 @@ function App() {
               week:weekName[new Date().getDay()],
               time:timeStr
             },...Tasks]);
+            
           localStorage.setItem(
             "tasksArr",JSON.stringify([
               {

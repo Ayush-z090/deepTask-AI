@@ -8,8 +8,8 @@ function ai_Call(userInput){
           })
     
 }
-          let dateObj = String(new Date())
-          let timeStr = /\d{2}:\d{2}/.exec(String(dateObj))[0]
-console.log(timeStr)
+//           let dateObj = String(new Date())
+//           let timeStr = /\d{2}:\d{2}/.exec(String(dateObj))[0]
+// console.log(timeStr)
 
 export {ai_Call}
